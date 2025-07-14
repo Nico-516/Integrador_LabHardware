@@ -1,0 +1,14 @@
+---
+main:
+  - name: Pagina de inicio
+    ref: "/_index"
+    icon: "gdoc_notification"
+    sub:
+      - name: Requisitos de los programas
+        ref: "/Requerimientos"
+      - name: Presupuesto del setup
+        ref: "/Presupuesto"
+      - name: Justificacion de componentes
+        ref: "/Justificacion"
+      - name: Conclusiones
+        ref: "/Conclusiones"
