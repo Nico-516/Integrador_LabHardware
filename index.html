@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Build</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+        }
+        
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            height: 100vh;
+            background: #1e1e1e;
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #4CAF50;
+        }
+        
+        .sidebar nav a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .sidebar nav a:hover {
+            color: white;
+            background: #333;
+        }
+        
+        .content {
+            margin-left: 270px;
+            padding: 40px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .meta {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .intro-text {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        th {
+            background: #4CAF50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .price-total {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        a.link-btn {
+            display: inline-block;
+            background: #2196F3;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 12px;
+            transition: background 0.3s;
+        }
+        
+        a.link-btn:hover {
+            background: #1976D2;
+        }
+        
+        .justification-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .justification-item:last-child {
+            border-bottom: none;
+        }
+        
+        .justification-item strong {
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        
+        .justification-item p {
+            margin-top: 8px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .ph {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class='sidebar'>
+        <h1>PC Build</h1>
+        <nav>
+            <a href='#intro'>Introducción</a>
+            <a href='#req'>Requerimientos</a>
+            <a href='#pres'>Presupuesto</a>
+            <a href='#just'>Justificación</a>
+            <a href='#conc'>Conclusiones</a>
+        </nav>
+    </div>
+    
+    <div class='content'>
+        <section id='intro'>
+            <h2>Proyecto integrador: Laboratorio de Hardware</h2>
+            <p class="meta">Fecha: 14 de julio de 2025</p>
+            <h3>Grupo: Mariano Gimenez y Nicolas Sanchez</h3>
+            
+            <p class="intro-text">
+                En esta página podrán encontrar un setup completo para una computadora actual, pensada para un aficionado en la creación de distintos tipos de contenidos, desde edición de audios y videos, hasta modelaje en 3D.
+            </p>
+            <p class="intro-text">
+                Esta PC está pensada para que dure muchos años sin la necesidad de un cambio de componentes, y también para que tenga un rendimiento eficaz y rápido.
+            </p>
+            <img src='img/ph1.png' class='ph' alt="PC Build">
+        </section>
+        
+        <section id='req'>
+            <h2>Requerimientos de programas</h2>
+            <p class="meta">Fecha: 14 de julio de 2025</p>
+            
+            <p class="intro-text">Estos son los requisitos de los programas:</p>
+            
+            <h3>Blender</h3>
+            <table>
+                <tr>
+                    <th>Componentes</th>
+                    <th>Requisitos Mínimos</th>
+                    <th>Requisitos recomendados</th>
+                </tr>
+                <tr>
+                    <td>Sistema operativo</td>
+                    <td>Windows 8.1 (64-bit)</td>
+                    <td>Windows 10 / 11</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>64bit de 4 núcleos</td>
+                    <td>8 núcleos</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>8GB</td>
+                    <td>32GB</td>
+                </tr>
+                <tr>
+                    <td>Gráfica</td>
+                    <td>2GB de VRAM, soporte OpenGL 4.3</td>
+                    <td>8GB de VRAM</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>400MB</td>
+                    <td>400MB</td>
+                </tr>
+            </table>
+            
+            <h3>Audacity</h3>
+            <table>
+                <tr>
+                    <th>Componentes</th>
+                    <th>Requisitos Mínimos</th>
+                    <th>Requisitos recomendados</th>
+                </tr>
+                <tr>
+                    <td>Sistema operativo</td>
+                    <td>Windows 7</td>
+                    <td>Windows 10 / 11</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>Procesador multi-núcleo como un I3 o equivalente</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>2GB</td>
+                    <td>4GB</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>40MB</td>
+                    <td>---</td>
+                </tr>
+            </table>
+            
+            <h3>Inkscape</h3>
+            <table>
+                <tr>
+                    <th>Componentes</th>
+                    <th>Requisitos Mínimos</th>
+                    <th>Requisitos recomendados</th>
+                </tr>
+                <tr>
+                    <td>Sistema operativo</td>
+                    <td>Windows 8.1</td>
+                    <td>Windows 10 / 11</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>Procesador de 1GHz</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>1GB</td>
+                    <td>2GB</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>100MB</td>
+                    <td>---</td>
+                </tr>
+            </table>
+            
+            <h3>Gimp</h3>
+            <table>
+                <tr>
+                    <th>Componentes</th>
+                    <th>Requisitos Mínimos</th>
+                    <th>Requisitos recomendados</th>
+                </tr>
+                <tr>
+                    <td>Sistema operativo</td>
+                    <td>Windows 10</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>Procesador de 1GHz</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>2GB</td>
+                    <td>4GB ~ 16GB</td>
+                </tr>
+                <tr>
+                    <td>Gráfica</td>
+                    <td>256MB de VRAM, soporte OpenGL 3.3</td>
+                    <td>2GB de VRAM</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>400MB</td>
+                    <td>1GB</td>
+                </tr>
+            </table>
+            
+            <h3>Krita</h3>
+            <table>
+                <tr>
+                    <th>Componentes</th>
+                    <th>Requisitos Mínimos</th>
+                    <th>Requisitos recomendados</th>
+                </tr>
+                <tr>
+                    <td>Sistema operativo</td>
+                    <td>Windows 8.1</td>
+                    <td>Windows 10 / 11</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>Procesador de 2 núcleos</td>
+                    <td>4 núcleos</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>4GB</td>
+                    <td>16GB</td>
+                </tr>
+                <tr>
+                    <td>Gráfica</td>
+                    <td>Gráfica integrada</td>
+                    <td>Gráfica dedicada</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>1GB</td>
+                    <td>15GB</td>
+                </tr>
+            </table>
+            
+            <h3>OBS Studio</h3>
+            <table>
+                <tr>
+                    <th>Componentes</th>
+                    <th>Requisitos Mínimos</th>
+                    <th>Requisitos recomendados</th>
+                </tr>
+                <tr>
+                    <td>Sistema operativo</td>
+                    <td>Windows 10 (64-bit)</td>
+                    <td>Windows 11</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>Intel i5 2500K or AMD Ryzen 1300X</td>
+                    <td>Intel i7 8700K or AMD Ryzen 1600X</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>4GB</td>
+                    <td>8GB ~ 16GB</td>
+                </tr>
+                <tr>
+                    <td>Gráfica</td>
+                    <td>(compatible con DirectX 10.1) HD Graphics 500, GeForce GTX 900 Series, o Radeon RX 400 Series</td>
+                    <td>GeForce 10 Series, Radeon 5000 Series, o Intel Xe graphics</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>500MB</td>
+                    <td>600MB</td>
+                </tr>
+            </table>
+            <div class="note">
+                <strong>Nota:</strong> Se recomienda una buena conexión a la red, en lo posible con conexión directa, a través de un cable.
+            </div>
+            <img src='img/ph2.png' class='ph' alt="Requirements">
+        </section>
+        
+        <section id='pres'>
+            <h2>Presupuesto del setup</h2>
+            <p class="meta">Fecha: 14 de julio de 2025</p>
+            
+            <table>
+                <tr>
+                    <th>Componente</th>
+                    <th>Nombre</th>
+                    <th>Precio en pesos</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Placa madre</td>
+                    <td>Mother ASUS PRIME B550M-A AC AM4 WIFI I</td>
+                    <td>$ 138.700</td>
+                    <td><a href="https://compragamer.com/producto/Mother_ASUS_PRIME_B550M_A_AC_AM4_WIFI_I_15019?criterio=motherboard" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>Procesador AMD Ryzen 7 5700 4.6GHz Turbo + Wraith Stealth Cooler</td>
+                    <td>$ 182.474</td>
+                    <td><a href="https://compragamer.com/producto/Procesador_AMD_Ryzen_7_5700_4_6GHz_Turbo_Wraith_Stealth_Cooler_15474?criterio=motherboard" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>CPU Cooler</td>
+                    <td>Ya viene incluido con el CPU</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>Gráfica</td>
+                    <td>Asrock Radeon RX 6600 8GB GDDR6 Challenger D</td>
+                    <td>$ 301.900</td>
+                    <td><a href="https://compragamer.com/producto/Placa_de_Video_Asrock_Radeon_RX_6600_8GB_GDDR6_Challenger_D_12947?criterio=motherboard" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento Principal</td>
+                    <td>Disco Sólido SSD M.2 ADATA 500GB Legend 860 6000MB/s NVMe PCIe Gen4 x4</td>
+                    <td>$ 57.850</td>
+                    <td><a href="https://compragamer.com/producto/Disco_Solido_SSD_M_2_ADATA_500GB_Legend_860_6000MB_s_NVMe_PCIe_Gen4_x4_18144?criterio=motherboard" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento Secundario</td>
+                    <td>Disco Sólido SSD Sandisk 2TB Plus 545MB/s</td>
+                    <td>$ 153.800</td>
+                    <td><a href="https://compragamer.com/producto/Disco_Solido_SSD_Sandisk_2TB_Plus_545MB_s_18106?criterio=motherboard" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>Memoria Team DDR4 32GB (2x16GB) 3200MHz T-Create Expert CL16</td>
+                    <td>$ 97.260</td>
+                    <td><a href="https://compragamer.com/producto/Memoria_Team_DDR4_32GB_2x16GB_3200MHz_T_Create_Expert_CL16_17526?criterio=motherboard" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>2 Coolers para el gabinete</td>
+                    <td>Cooler Fan ID-Cooling 120mm AS-120-ARGB-K Black ARGB</td>
+                    <td>$ 19.300</td>
+                    <td><a href="https://compragamer.com/producto/Cooler_Fan_ID_Cooling_120mm_AS_120_ARGB_K_Black_ARGB_17195?criterio=motherboard" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>Gabinete</td>
+                    <td>Gabinete Checkpoint NEBULA 350 RGB 4x120mm RGB Fixed Fans ATX</td>
+                    <td>$ 36.587</td>
+                    <td><a href="https://compragamer.com/producto/Gabinete_Checkpoint_NEBULA_350_RGB_4x120mm_RGB_Fixed_Fans_ATX_18180?criterio=motherboard" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>Fuente</td>
+                    <td>Fuente ADATA XPG 750W 80 Plus Gold Full Modular ATX 3.1 PCIe 5.1 CORE REACTOR II VE</td>
+                    <td>$ 147.300</td>
+                    <td><a href="https://compragamer.com/producto/Fuente_ADATA_XPG_750W_80_Plus_Gold_Full_Modular_ATX_3_1_PCIe_5_1_CORE_REACTOR_II_VE_16944?criterio=motherboard" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>Mouse</td>
+                    <td>Mouse Logitech M110S Negro Blue USB</td>
+                    <td>$ 4.597</td>
+                    <td><a href="https://compragamer.com/producto/Mouse_Logitech_M110S_Negro_Blue_USB_10172?cate=2&criterio=logitech" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>Teclado</td>
+                    <td>Teclado Logitech K120 Negro USB</td>
+                    <td>$ 11.990</td>
+                    <td><a href="https://compragamer.com/producto/Teclado_Logitech_K120_Negro_USB_3512?criterio=Teclado" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>Monitor</td>
+                    <td>Monitor Lenovo ThinkVision S22i-30 21.5" FHD IPS 75Hz Anti Glare VESA</td>
+                    <td>$ 129.900</td>
+                    <td><a href="https://compragamer.com/producto/Monitor_Lenovo_ThinkVision_S22i_30_21_5_FHD_IPS_75Hz_Anti_Glare_VESA_16969?cate=5" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>Parlantes</td>
+                    <td>Genius USB SP-HF180</td>
+                    <td>$ 35.237</td>
+                    <td><a href="https://www.mercadolibre.com.ar/parlante-stereo-genius-usb-ideal-escritorio-pc-notebook-color-negro/p/MLA15840119" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+            </table>
+            
+            <h3>También se le puede agregar una Webcam con micrófono</h3>
+            <table>
+                <tr>
+                    <th>Componente</th>
+                    <th>Nombre</th>
+                    <th>Precio en pesos</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Webcam y micrófono</td>
+                    <td>Webcam Logitech Brio 105 Black FHD 1080p/30FPS 720p/60FPS</td>
+                    <td>$ 57.600</td>
+                    <td><a href="https://compragamer.com/producto/Webcam_Logitech_Brio_105_Black_FHD_1080p_30FPS_720p_60FPS_17638?cate=13" target="_blank" class="link-btn">Ver</a></td>
+                </tr>
+            </table>
+            
+            <div class="price-total">
+                Precio Final: $ 1.375.100 pesos
+            </div>
+            <p style="text-align: center; color: #666; margin-top: 10px;">
+                (Incluyendo la webcam con micrófono)
+            </p>
+            <img src='img/ph3.png' class='ph' alt="Budget">
+        </section>
+        
+        <section id='just'>
+            <h2>Justificación</h2>
+            <p class="meta">Fecha: 14 de julio de 2025</p>
+            
+            <h3>Componentes y la razón de haberlos elegido</h3>
+            
+            <div class="justification-item">
+                <strong>Placa madre:</strong>
+                <p>Elegimos esta placa madre porque personalmente la hemos usado y funciona rápida y eficazmente, además, es de una marca reconocida y este modelo va a seguir siendo útil después de un tiempo.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Procesador:</strong>
+                <p>Elegimos este procesador principalmente por el tipo de socket que tiene y la cantidad de núcleos disponibles, además de que venía con su propio cooler en la misma compra.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Gráfica:</strong>
+                <p>Elegimos esta gráfica porque cumple con los requisitos recomendados del programa más exigente para este setup, además de que es de la misma marca que el procesador. Y también porque era de los mejores precios dentro de los requisitos que necesitábamos.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Almacenamiento Principal:</strong>
+                <p>Elegimos un M2 como almacenamiento principal porque nuestra idea es que el usuario lo use para almacenar el sistema operativo, programas o archivos de suma importancia. Más que nada para que la PC funcione lo más rápido que pueda tanto en su arranque, como en su uso activo.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Almacenamiento Secundario:</strong>
+                <p>Elegimos un disco sólido de 2TB para que el usuario almacene todos los proyectos o archivos varios que desee guardar. Su gran espacio disponible está para que el usuario no se preocupe de comprar otro disco en bastante tiempo, y es disco duro para que pueda acceder a la información guardada de manera rápida. Además que los programas que usen proyectos van a funcionar mucho más rápido.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>RAM:</strong>
+                <p>Elegimos 32GB porque era lo recomendado por el programa más exigente, y también para que tenga de sobra en el futuro. Por lo que este componente no va a necesitar un cambio por mucho tiempo.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Fuente:</strong>
+                <p>Elegimos esta fuente porque cubre todo el gasto en watts de los componentes y le sobran la mitad watts, más que nada por un tema de seguridad para estar cubiertos, y también para que los componentes sean escalables y no sea totalmente necesario cambiar la fuente. No pudimos encontrar una fuente con el sello de seguridad eléctrica argentina, pero conseguimos una con el sello de 80Plus Gold.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Gabinete:</strong>
+                <p>Elegimos este gabinete principalmente por su precio y también por la compatibilidad con todas las piezas anteriormente mencionadas.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Cooler para gabinete:</strong>
+                <p>Elegimos este cooler principalmente por el precio que tenía, y también porque un solo cooler de stock en el gabinete podría no ser suficiente para disipar el calor que generan los componentes dentro del gabinete.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Mouse:</strong>
+                <p>Elegimos este mouse porque personalmente lo usamos, es barato y cumple su cometido.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Teclado:</strong>
+                <p>Elegimos este teclado principalmente por su precio y comodidad básica, además de que incluya un teclado numérico, herramienta muy útil en el modelado 3D de Blender.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Monitor:</strong>
+                <p>Elegimos este monitor por ser de un precio medio barato y que proyecta una imagen decente en FullHD (1920 x 1080) a 75hz.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Parlantes:</strong>
+                <p>Elegimos unos parlantes básicos para que el usuario no tenga que preocuparse por el sonido, y también porque era de lo más barato y decente que pudimos encontrar.</p>
+            </div>
+            
+            <div class="justification-item">
+                <strong>Webcam con micrófono:</strong>
+                <p>Elegimos esta webcam en el caso de que el usuario quiera tener la posibilidad de grabarse tanto en video como audio. Optamos por la marca Logitech por la buena calidad que tiene, y también porque nosotros personalmente usamos cámaras de Logitech.</p>
+            </div>
+            
+            <img src='img/ph4.png' class='ph' alt="Justification">
+        </section>
+        
+        <section id='conc'>
+            <h2>Conclusiones</h2>
+            <p class="meta">Fecha: 14 de julio de 2025</p>
+            
+            <p class="intro-text">
+                Pensamos que este setup es capaz de cubrir casi todas las necesidades que podría tener el usuario a la hora de usar este setup, además de que podemos asegurar que va a durar más de 5 años sin problemas mayores.
+            </p>
+            
+            <div class="note" style="margin-top: 30px;">
+                <p style="line-height: 1.6;">
+                    En otro apartado, personalmente nosotros pensamos que la creación de esta página no fue algo realmente necesario para la implementación de los conocimientos aprendidos en la materia de laboratorio de hardware. En nuestro caso, tuvimos varios problemas pequeños que fueron solucionables, pero tomó bastante tiempo, además de los parciales y recuperatorios que hicimos personalmente, nos dejó con poco tiempo para este proyecto, tiempo que usamos para armar el setup. Pero en nuestro caso no llegamos a terminar la página a tiempo debido a numerosos retrasos debidos a estudio, temas familiares, trabajo, y dificultad con la página. De hecho es justamente por eso que no hay imágenes en esta página, cada vez que lo poníamos, la imagen no se mostraba, o se mostraba de una manera deformada.
+                </p>
+            </div>
+            
+            <img src='img/ph5.png' class='ph' alt="Conclusions">
+        </section>
+    </div>
+</body>
+</html>
